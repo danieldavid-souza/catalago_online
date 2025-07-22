@@ -1,0 +1,565 @@
+/* Estilo base do corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #1d1f2b,#1d1f2b), url('fundo-decorativo.png') no-repeat center;
+  background-size: 500px;
+  background-attachment: fixed;
+  color: #f8f8f8;
+}
+
+/* Estilo do cabeçalho */
+.topo {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e5b4c9, #aadcd1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.topo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Título principal e slogan */
+h1 { color: #333; margin: 0; }
+p.slogan { font-style: italic; color: #555; margin-top: 8px; }
+
+/* Seção 'Sobre' */
+.sobre {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.sobre h2 { color: #e5b4c9; font-size: 22px; margin-bottom: 12px; }
+.sobre p {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título da seção de produtos */
+.titulo-produtos {
+  text-align: center;
+  color: #e5b4c9;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Layout dos cards de produto */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card individual */
+.produto {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  min-height: 460px;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produto h2 { font-size: 18px; margin: 8px 0; color: #444; }
+.preco { font-size: 16px; color: #008000; font-weight: bold; margin-bottom: 8px; }
+.produto p { font-size: 14px; color: #555; margin-bottom: 10px; }
+
+/* Botão WhatsApp estilizado */
+.whatsapp-btn {
+  background: #4dc9a3;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 50px;
+  display: block;
+  width: fit-content;
+  margin: 12px auto 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 🎯 Container principal da galeria (carrossel) */
+.carrossel {
+  position: relative;       /* Permite posicionar botões sobre a faixa */
+  overflow: hidden;         /* Oculta rolagem vertical fora da faixa */
+  max-width: 100%;          /* Ocupa largura total disponível */
+  margin: 0 auto;           /* Centraliza horizontalmente */
+}
+
+/* 🧩 Faixa de imagens rolável horizontalmente */
+.faixa {
+  display: flex;            /* Alinha imagens em linha */
+  flex-direction: row;      /* Garante orientação horizontal */
+  gap: 20px;                /* Espaço entre as imagens */
+  padding: 10px;            /* Espaçamento interno da faixa */
+  overflow-x: auto;         /* Permite rolagem lateral */
+  scroll-behavior: smooth;  /* Anima rolagem suavemente */
+}
+
+/* 🎛️ Estilo da barra de rolagem (opcional, apenas para navegadores que suportam) */
+.faixa::-webkit-scrollbar {
+  height: 8px;              /* Altura da barra de rolagem horizontal */
+}
+
+.faixa::-webkit-scrollbar-thumb {
+  background: #ccc;         /* Cor da barra ativa */
+  border-radius: 4px;       /* Cantos arredondados da barra */
+}
+
+/* 🖼️ Bloco individual de cada imagem com legenda */
+.foto-zoom {
+  flex-shrink: 0;           /* Impede que as imagens diminuam com a rolagem */
+  width: 240px;             /* Largura fixa para consistência */
+  cursor: pointer;          /* Indica que o item é interativo */
+  text-align: center;       /* Centraliza legenda */
+}
+
+/* ✨ Imagem da galeria com estilo visual e efeito de zoom */
+.foto-zoom img {
+  width: 100%;              /* Ocupa toda a largura do container */
+  border-radius: 12px;      /* Cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra suave */
+  transition: transform 0.3s ease;       /* Animação ao interagir */
+  object-fit: cover;        /* Garante que a imagem mantenha proporção ao preencher */
+}
+
+/* 📝 Legenda abaixo de cada imagem */
+.foto-zoom figcaption {
+  font-size: 14px;
+  color: #e5b4c9;           /* Rosa pastel do tema */
+  margin-top: 6px;
+}
+
+/* Container com efeito de zoom */
+.foto-zoom, .card-zoom {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Imagens com transição suave */
+.foto-zoom img,
+.card-zoom img {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+/* Zoom leve ao passar o mouse */
+.foto-zoom:hover img,
+.card-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Fundo escurecido ao clicar */
+.foto-zoom:active::after,
+.card-zoom:active::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+/* Imagem ampliada ao clicar (zoom modal) */
+.foto-zoom:active img,
+.card-zoom:active img {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  z-index: 11;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border-radius: 12px;
+}
+
+/* 🔍 Zoom ajustado ao clicar em imagem */
+.foto-zoom:active img,
+.card-zoom:active img {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.2); /* Zoom controlado para não exagerar */
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  z-index: 11;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border-radius: 12px;
+}
+
+/* Aplica borda arredondada nas imagens com zoom */
+.foto-zoom img,
+.card-zoom img,
+.depoimento img {
+  border-radius: 12px; /* Pode ajustar para 16px se quiser mais suave */
+}
+
+.foto-zoom:active img,
+.card-zoom:active img {
+  border-radius: 12px; /* Mantém o arredondamento mesmo ampliado */
+}
+
+/* 🎨 Estilo geral da página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #1d1f2b,#1d1f2b), url('fundo-decorativo.png') no-repeat center;
+  background-size: 500px;
+  background-attachment: fixed;
+  color: #f8f8f8;
+}
+
+/* 🔷 Cabeçalho */
+.topo {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e5b4c9, #aadcd1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.topo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* 🧭 Texto principal e slogan */
+h1 { color: #333; margin: 0; }
+p.slogan { font-style: italic; color: #555; margin-top: 8px; }
+
+/* 📌 Seção Sobre */
+.sobre {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* 🖼️ Galeria de fotos */
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+.faixa {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.foto-zoom {
+  flex-shrink: 0;
+  width: 240px;
+  cursor: pointer;
+  text-align: center;
+}
+.foto-zoom img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.foto-zoom figcaption {
+  font-size: 14px;
+  color: #e5b4c9;
+  margin-top: 6px;
+}
+
+/* 🛍️ Cards de produto */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.produto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.08);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+.produto img {
+  width: 100%;
+  border-radius: 12px;
+}
+.produto h2 { font-size: 18px; color: #333; margin: 8px 0; }
+.preco { color: #008000; font-weight: bold; margin-bottom: 10px; }
+.produto p { font-size: 14px; color: #444; }
+
+/* ✅ Zoom ao passar o mouse */
+.card-zoom:hover img,
+.foto-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* 🔍 Zoom ao clicar */
+.card-zoom:active img,
+.foto-zoom:active img {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  z-index: 11;
+}
+.card-zoom:active::after,
+.foto-zoom:active::after {
+  content: '';
+}
+
+/* 🔘 Estilo dos botões de rolagem da galeria */
+.carrossel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Botões de seta */
+.seta {
+  background-color: #e5b4c9;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+/* 🧭 Posicionamento fixo à esquerda e à direita */
+.seta.esquerda {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.seta.direita {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 💬 Seção de Depoimentos com layout em coluna */
+.depoimentos {
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Título da seção */
+.depoimentos h2 {
+  color: #e5b4c9;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+/* Cada bloco de depoimento */
+.depoimento {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Imagem do cliente com zoom e borda suave */
+.depoimento .foto-zoom {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+.depoimento img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.depoimento .foto-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Texto do depoimento */
+.depoimento .texto {
+  text-align: left;
+}
+.depoimento p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.depoimento cite {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+/* 📫 Rodapé com contatos e identidade visual */
+.rodape {
+  background-color: #1d1f2b;
+  color: #ddd;
+  padding: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Links no rodapé */
+.rodape a {
+  color: #e5b4c9;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: bold;
+}
+
+.rodape a:hover {
+  color: #fff;
+}
+
+/* Ícones de contato */
+.rodape .icone-link {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.4));
+}
+
+/* 🔍 Zoom ao clicar na imagem */
+.foto-zoom:active img,
+.card-zoom:active img,
+.depoimento .foto-zoom:active img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2); /* Zoom suave */
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 50%; /* Para manter o arredondado circular no depoimento */
+}
+
+/* Este trecho estiliza o Título da Seção Galeria de Fotos */
+.galeria h2 {
+  text-align: center;         /* Centraliza o título */
+  color: #e5b4c9;             /* Rosa pastel suave */
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ✨ Estilo especial do slogan no topo */
+.slogan-destaque {
+  font-size: 16px;
+  color: #e5b4c9;
+  font-style: italic;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* 🌈 Bloco com fundo decorativo e centralização 
+.slogan-bloco {
+  background: linear-gradient(135deg, #e5b4c9, #aadcd1);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+}*/
+
+/* 🔖 Bloco do slogan sem fundo */
+.slogan-bloco {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* 💖 Ícone ilustrativo no topo do slogan */
+.icone-slogan {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ✨ Texto principal do slogan com fonte elegante */
+.slogan-destaque {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1d1f2b;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* 🖋️ Importa fonte especial */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* 📱 Responsividade para telas menores */
+@media (max-width: 480px) {
+  .slogan-bloco {
+    padding: 16px;
+  }
+
+  .slogan-destaque {
+    font-size: 16px;
+  }
+
+  .icone-slogan {
+    font-size: 20px;
+  }
+}
+

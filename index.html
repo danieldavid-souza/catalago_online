@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<header class="topo">
+  <img src="img/logo-lima-calixto.png" alt="Logo Lima Calixto" />
+  <h1>Lima Calixto Personalizados</h1>
+
+  <!-- 🔖 Slogan com fundo decorativo -->
+  <div class="slogan-bloco">
+    <span class="icone-slogan">💖</span>
+    <p class="slogan-destaque">
+      <b>Afeto impresso em cada criação.<br>
+      Emoção nos detalhes. Propósito em cada presente.</b>
+    </p>
+  </div>
+</header>
+
+
+<head>
+  <!-- Meta tags para codificação e responsividade -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo Lima Calixto Personalizados" />
+  <title>Lima Calixto Personalizados</title>
+
+  <!-- Imagem decorativa pré-carregada para performance -->
+  <link rel="preload" href="fundo-decorativo.png" as="image" />
+
+  <!-- Link externo do CSS separado -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ícones Font Awesome (usado nos botões e rodapé) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+  <body>
+    <!-- Cabeçalho com logo, título e slogan 
+    <header class="topo">
+      <img src="img/logo-lima-calixto.png" alt="Logo Lima Calixto" />
+      <h1>Lima Calixto Personalizados</h1>
+      <p class="slogan"><b>
+        Afeto impresso em cada criação. Emoção nos detalhes. Propósito em cada presente.
+        Personalize com alma. Surpreenda com sentimento.
+        Design que marca. Presente que emociona.
+      </b></p>
+    </header> -->
+
+    <!-- Seção 'Sobre' com resumo da marca -->
+    <section class="sobre">
+      <h2>Sobre a Lima Calixto</h2>
+      <p>
+        A Lima Calixto Personalizados nasceu do desejo de transformar lembranças em presentes únicos e afetivos.
+        Unimos design delicado, criatividade e emoção para entregar produtos que contam histórias e criam conexões.
+        Tudo é feito com carinho, atenção aos detalhes e foco total em quem vai receber.
+      </p>
+    </section>
+
+    <!-- Galeria com carrossel de fotos e efeito de zoom -->
+    <section class="galeria">
+      <h2>Galeria de Fotos</h2>
+      <div class="carrossel">
+        <button class="seta esquerda">←</button>
+        <div class="faixa">
+          <!-- Cada imagem tem zoom no clique e legenda afetiva -->
+          <div class="foto-zoom">
+            <img src="img/galeria1.jpg" alt="Estilo que emociona 💕" />
+            <figcaption>Estilo que emociona 💕</figcaption>
+          </div>
+          <!-- Repetir estrutura para demais imagens -->
+          <div class="foto-zoom"><img src="img/galeria2.jpg" alt="Foto 2" /><figcaption>Detalhes com amor 🌸</figcaption></div>
+          <div class="foto-zoom"><img src="img/galeria3.jpg" alt="Foto 3" /><figcaption>Estilo que emociona 💕</figcaption></div>
+          <div class="foto-zoom"><img src="img/galeria4.jpg" alt="Foto 4" /><figcaption>Estilo que emociona 💕</figcaption></div>
+          <div class="foto-zoom"><img src="img/galeria5.jpg" alt="Foto 5" /><figcaption>Detalhes com amor 🌸</figcaption></div>
+          <div class="foto-zoom"><img src="img/galeria6.jpg" alt="Foto 6" /><figcaption>Estilo que emociona 💕</figcaption></div>
+          <div class="foto-zoom"><img src="img/galeria7.jpg" alt="Foto 7" /><figcaption>Detalhes com amor 🌸</figcaption></div>
+        </div>
+        <button class="seta direita">→</button>
+      </div>
+    </section>
+
+    <!-- Seção de produtos com cards e botões WhatsApp -->
+    <h2 class="titulo-produtos">Nossos Produtos</h2>
+    <div class="catalogo">
+      <!-- Exemplo de um produto -->
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/camiseta-crista.jpg" alt="Camiseta com estampa MEU ALVO É CRISTO" />
+        </div>
+        <h2>Camiseta - Meu Alvo é Cristo</h2>
+        <p class="preco">R$ 45,00</p>
+        <p>Design inspirado na cruz com mensagem que emociona.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Camiseta">Fale no WhatsApp</a>
+      </div>
+      
+      <div class="produto">
+          <div class="card-zoom">
+              <img src="img/camisa_Jesus.jpg" alt="Eu abro mão de tudo porque Ele abriu mão de tudo por mim" />
+          </div>
+          <h2>Camiseta Branca - Eu abro mão de tudo porque Ele abriu mão de tudo por mim</h2>
+          <p class="preco">R$ 40,00</p>
+          <p>Camisa branca sublimada 100% poliéster, estilosa e totalmente personalizável! Fotos, frases, arte — tudo com seu toque especial.</p>
+          <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Camiseta+branca+Eu+abro+mão+de+tudo+proque+Ele+abriu+mão+de+tudo+por+mim" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/caneca-lucas.jpg" alt="Caneca personalizada com o nome Lucas e moldura floral" />
+        </div>
+        <h2>Caneca de Porcelana 325ml</h2>
+        <p class="preco">R$ 38,00</p>
+        <p>Design floral encantador com nome personalizado. Um presente delicado que aquece o coração e o café!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Caneca+de+Porcelana+325ml" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/caneca-aluminio-ideia.jpg" alt="Caneca de alumínio personalizada com lâmpadas e frase sua ideia fotos, frases aqui" />
+        </div>
+        <h2>Caneca de Alumínio 600ml - Sua Ideia Aqui</h2>
+        <p class="preco">R$ 30,00</p>
+        <p>Caneca leve, estilosa e totalmente personalizável! Fotos, frases, arte — tudo com seu toque especial.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Caneca+de+Alum%C3%ADnio+600ml" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/caneca_polimero.jpg" alt="Caneca de Polímero com interior colorido 325ml personalizada com ideia FOTOS, FRASES" />
+        </div>
+        <h2>Caneca de Polímero com interior colorido 325ml</h2>
+        <p class="preco">R$ 30,00</p>
+        <p>Leve, moderno e pronto para ser personalizado com suas melhores ideias. Fotos, frases, estilo — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Caneca+de+Polímero" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/relogio-dia-das-maes.jpg" alt="Relógio decorativo com fotos personalizadas e frase Feliz Día de las Madres" />
+        </div>
+        <h2>Relógio MDF</h2>
+        <p class="preco">R$ 40,00</p>
+        <p>Uma homenagem única com fotos e a mensagem que emociona. Ideal para presentear com carinho e estilo.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Rel%C3%B3gio+Decorativo" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/quadro-mae.jpg" alt="Quadro com foto no formato de coração e frase MÃE amor infinito com versículo bíblico" />
+        </div>
+        <h2>Placa MDF Decorativo Tamanho A4</h2>
+        <p class="preco">R$ 30,00</p>
+        <p>Design com coração e mensagem bíblica. Um presente especial que une fé, afeto e uma lembrança eterna.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Quadro+Decorativo+M%C3%A3e+Amor+Infinito" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/azulejo.jpg" alt="Quadro com foto no formato de coração e frase MÃE amor infinito com versículo bíblico" />
+        </div>
+        <h2>Azulejo Sublimado Tamanho 20x20cm</h2>
+        <p class="preco">R$ 40,00</p>
+        <p>Design com coração e mensagem bíblica. Um presente especial que une fé, afeto e uma lembrança eterna.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Azulejo+Sublimado+20x20cm" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/squeeze-personalizada.jpg" alt="Squeeze de alumínio com estampa colorida e frase Que sua ideia fotos, frases aqui" />
+        </div>
+        <h2>Squeeze de Alumínio 500ml - Personalizada</h2>
+        <p class="preco">R$ 35,00</p>
+        <p>Design vibrante e espaço para sua ideia ganhar vida! Fotos, frases, arte — tudo personalizado com criatividade.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Squeeze+de+Alum%C3%ADnio+Personalizada+500ml" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/chaveiro-ideia.jpg" alt="Chaveiro redondo com design colorido e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Chaveiro Redondo MDF - Sua Ideia Aqui</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Mini peça com personalidade! Personalize com fotos, frases ou arte e leve sua mensagem pra todo lugar.</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Chaveiro+Redondo+MDF" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/chaveiro-acrilico.jpg" alt="Chaveiro acrílico com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Chaveiro de Acrílico - Sua Ideia Aqui</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Leve, moderno e pronto para ser personalizado com suas melhores ideias. Fotos, frases, estilo — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Chaveiro+de+Acr%C3%ADlico" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/calendario_mesa.jpg" alt="Calendário de Mesa com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Calendário de Mesa Triangular - Sua Ideia Aqui</h2>
+        <p class="preco">R$ 10,00</p>
+        <p>Leve, moderno e pronto para ser personalizado com suas melhores ideias. Fotos, frases, estilo — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Calendário+de+de+Mesa+Triangular" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/agenda.png" alt="Agenda Sublimada MDF com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Agenda Sublimada Capa MDF - Sua Ideia Aqui</h2>
+        <p class="preco">R$ 65,00</p>
+        <p>Leve, moderno e pronto para ser personalizado com suas melhores ideias. Fotos, frases, estilo — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+a+Agenda+MDF+para+sublimação" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/convite_infantil_ela.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+tema+infantil+rosa" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/convite_15_anos.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+15+Anos" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/convite_casamento.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+de+Casamento" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/convite_futebol.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+de+Futebol" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/convite_futebol2.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+de+Futebol" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/Convite_Gamer.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+Gamer" target="_blank">Fale no WhatsApp</a>
+      </div>
+
+      <div class="produto">
+        <div class="card-zoom">
+          <img src="img/Convite_Gamer2.png" alt="Convite Digital com ilustração de lâmpadas e frase sua ideia FOTOS, FRASES aqui" />
+        </div>
+        <h2>Convite Digital</h2>
+        <p class="preco">R$ 5,00</p>
+        <p>Moderno e pronto para ser personalizado com o tema de sua festa — você escolhe!</p>
+        <a class="whatsapp-btn" href="https://wa.me/5532991657472?text=Quero+saber+sobre+o+Convinte+Digital+Gamer" target="_blank">Fale no WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Seção de depoimentos com foto e texto -->
+    <section class="depoimentos">
+      <h2>Depoimentos de Clientes</h2>
+        <div class="depoimento">
+          <div class="foto-zoom">
+            <img src="cliente1.jpg" alt="Foto da Juliana sorrindo" />
+          </div>
+          <div class="texto">
+            <p>“Fiquei emocionada com o cuidado em cada detalhe. Super recomendo!”</p>
+            <cite>– Juliana, MG</cite>
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="foto-zoom">
+            <img src="cliente2.jpg" alt="Foto do Marcos sorrindo" />
+          </div>
+          <div class="texto">
+            <p>“Produto lindo e atendimento incrível. Gratidão!”</p>
+            <cite>– Marcos, MG</cite>
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="foto-zoom">
+            <img src="cliente3.jpg" alt="Foto da Ana com presente" />
+          </div>
+          <div class="texto">
+            <p>“Me surpreendi com a qualidade! Vai muito além de personalizado — é feito com amor.”</p>
+            <cite>– Ana, MG</cite>
+          </div>
+        </div>
+    </section>
+
+    <!-- Rodapé com ícones personalizados -->
+    <footer class="rodape">
+      <p>©2021 Lima Calixto Personalizados - Todos os direitos reservados</p>
+      <p>
+        <!-- Ícone real de e-mail -->
+        <a href="mailto:limacalixtopersonalizados@gmail.com">
+          <img src="icone-email.png" alt="E-mail" class="icone-link" /> E-mail
+        </a> |
+        <!-- Ícone real de Instagram -->
+        <a href="https://instagram.com/limacalixtopersonalizados" target="_blank">
+          <img src="icone-instagram.png" alt="Instagram" class="icone-link" /> Instagram
+        </a>
+      </p>
+    </footer>
+
+    <!-- Script que controla a rolagem do carrossel da galeria -->
+    <script>
+      const faixa = document.querySelector('.faixa');
+      const btnEsquerda = document.querySelector('.seta.esquerda');
+      const btnDireita = document.querySelector('.seta.direita');
+
+      btnDireita.onclick = () => {
+        faixa.scrollBy({ left: 300, behavior: 'smooth' });
+      };
+
+      btnEsquerda.onclick = () => {
+        faixa.scrollBy({ left: -300, behavior: 'smooth' });
+      };
+    </script>
+  </body>
+</html>
